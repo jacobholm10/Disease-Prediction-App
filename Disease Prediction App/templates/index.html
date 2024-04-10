@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Select Model</h1>
+        <form action="/select_model" method="post" class="form">
+            <div class="form-group">
+                <label for="model">Select a model:</label>
+                <select id="model" name="model" class="select-model">
+                    <option value="cardiovascular">Cardiovascular Model</option>
+                    <option value="heart">Heart Attack Model</option>
+                    <option value="diabetes">Diabetes Model</option>
+                </select>
+            </div>
+            <input type="submit" value="Next" class="btn-submit">
+        </form>
+    </div>
+</body>
+</html>

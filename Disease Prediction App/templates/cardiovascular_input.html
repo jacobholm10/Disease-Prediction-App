@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inputs.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cardiovascular Disease Prediction</h1>
+        <form action="/cardiovascular/predict" method="post">
+            <div class="input-group">
+                Age (years): <input type="text" name="age"><br>
+                Gender (1: Female, 2: Male): <input type="text" name="gender"><br>
+                Height(in): <input type="text" name="height"><br>
+                Weight: <input type="text" name="weight"><br>
+                Systolic blood pressure: <input type="text" name="systolic"><br>
+                Diastolic blood pressure: <input type="text" name="diastolic"><br>
+                Cholesterol (1: normal, 2: above normal, 3: well above normal): <input type="text" name="cholesterol"><br>
+                Glucose (1: normal, 2: above normal, 3: well above normal): <input type="text" name="glucose"><br>
+                Do you smoke? (0: no, 1: yes): <input type="text" name="smoke"><br>
+                Alcohol (0: no, 1: yes): <input type="text" name="alcohol"><br>
+                Are you active? (0: No, 1: Yes) <input type="text" name="active"><br>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+    <div class="error-message">
+        <p>{{ error_message }}</p>
+    </div>
+</body>
+</html>

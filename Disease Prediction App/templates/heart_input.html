@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inputs.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="/heart/predict" method="post">
+            <div class="input-group">
+                Age <input type="text" name="age"><br>
+                Gender (0: Female, 1: Male) <input type="text" name="gender"><br>
+                Impulse <input type="text" name="impulse"><br>
+                Pressure High <input type="text" name="pressurehigh"><br>
+                Pressure Low <input type="text" name="pressurelow"><br>
+                Glucose <input type="text" name="glucose"><br>
+                KCM <input type="text" name="kcm"><br>
+                Troponin <input type="text" name="troponin"><br>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+    <div class="error-message">
+        <p>{{ error_message }}</p>
+    </div>
+</body>
+</html>

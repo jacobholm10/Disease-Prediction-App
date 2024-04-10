@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inputs.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <form action="/diabetes/predict" method="post">
+            <div class="input-group">
+                Pregnancies <input type="text" name="pregnancies"><br>
+                Glucose <input type="text" name="glucose"><br>
+                Blood Pressure (mm Hg)<input type="text" name="bloodpressure"><br>
+                Skin Thickness (mm)<input type="text" name="skintickness"><br>
+                Insulin (mu U/ml)<input type="text" name="insulin"><br>
+                Body Mass Index <input type="text" name="bmi"><br>
+                Diabetes Pedigree Function <input type="text" name="function"><br>
+                Age (years) <input type="text" name="page"><br>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+    <div class="error-message">
+        <p>{{ error_message }}</p>
+    </div>
+</body>
+</html>
